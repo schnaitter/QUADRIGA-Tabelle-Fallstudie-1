@@ -1,0 +1,27 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: Markdown/Intro
+parts:
+  - caption: Einleitung
+    chapters:
+    - file: Markdown/Ausgangssituation
+    - file: Markdown/Nationaler_Bildungsbericht
+  - caption: Datenerhebung & -nachnutzung
+    chapters:
+    - file: Markdown/Einleitung_Datenqualität
+    - file: Markdown/Qualitätsmerkmale_Open_Data
+    - file: Markdown/5_Star_Model
+    - file: Markdown/Gütekriterien_Sozialforschung
+    - file: Markdown/Qualitätskriterien_amtliche_Statistikdaten
+    - file: Markdown/Reproduzierbarkeit
+    - file: Markdown/Wimmelbild
+  - caption: Datenanreicherung & -bereinigung 
+    chapters:
+    - file: Markdown/Einleitung_Datenbearbeitung
+    - file: Markdown/R_Markdown
+    - file: Markdown/R_Übung_Reprodu
+  - caption: Zusammenfassung
+    chapters: 
+    - file: Markdown/Zusammenfassung
