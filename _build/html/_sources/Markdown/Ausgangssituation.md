@@ -1,13 +1,5 @@
 # Ausgangssituation
 
-Kurze Beschreibung der Fallstudie und Forschungsfrage
+*Kurze Beschreibung der Fallstudie und Forschungsfrage*
 
-**Story:** Wir gehen von einem Verwaltungswissenschaftler
-oder Fachcontroller in der Verwaltung aus, der der Frage nachgehen möchte, wie
-sich der Personalbestand in den letzten 10 Jahren entwickelt hat. Dafür greift
-er auf die bestehenden Daten des Nationalen Bildungsberichts von 2022 zurück,
-es werden keine neuen Daten von ihm erhoben. Für seine Analysen möchte er die
-Daten in R Studio oder Jupyter Notebook aufbereiten und mit weiteren
-demografischen und sozioökonomischen Daten anreichern. Deshalb muss der
-Forschende die Qualität des Datensatzes bewerten und die Daten für die Analyse
-aufbereiten.
+Die erste Fallstudie des Datentyps "Tabelle" nimmt die für die Verwaltungswissenschaft bedeutsamen Daten aus dem Bildungsbereich in den Blick. Dabei steht die Reproduzierbarkeit von Forschungsergebnissen und damit die Bewertung von Datenqualität im Fokus. Anhand einer beispielhaften Forschungsfrage mit Bezug auf den Nationalen Bildungsbericht werden unter Verwendung von erklärenden Texten, praktischen Übungen und ... Wissen und Fähigkeiten in ... Bereichen vermittelt. Dies deckt Kompetenzen aus den Phasen der Planung, Datenerhebung/Nachnutzung, Analyse und Visualisierung des wissenschaftlichen Datenflusses ab.

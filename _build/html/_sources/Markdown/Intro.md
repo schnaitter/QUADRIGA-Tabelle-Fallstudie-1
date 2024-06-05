@@ -1,4 +1,4 @@
-# QUADRIGA: Fallstudie I - Tabelle
+# QUADRIGA - Fallstudie I: Bildungslandschaft
 
 In dieser Fallstudie wird...
 

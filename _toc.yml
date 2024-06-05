@@ -4,24 +4,28 @@
 format: jb-book
 root: Markdown/Intro
 parts:
-  - caption: Einleitung
+  - caption: 1. Einleitung
     chapters:
     - file: Markdown/Ausgangssituation
-    - file: Markdown/Nationaler_Bildungsbericht
-  - caption: Datenerhebung & -nachnutzung
+    - file: Markdown/Aufbau_Fallstudie
+    - file: Markdown/Datenbasis_Bildungsbericht
+  - caption: 2. Datennachnutzung & Datenqualität
     chapters:
-    - file: Markdown/Einleitung_Datenqualität
-    - file: Markdown/Qualitätsmerkmale_Open_Data
+    - file: Markdown/Einleitung_Datennachnutzung
+    - file: Markdown/Qualitätsmerkmale_Offene_Daten
+    - file: Markdown/Qualitätsmerkmale_Statistikdaten
+    - file: Markdown/Fair_Prinzipien
     - file: Markdown/5_Star_Model
-    - file: Markdown/Gütekriterien_Sozialforschung
-    - file: Markdown/Qualitätskriterien_amtliche_Statistikdaten
-    - file: Markdown/Reproduzierbarkeit
-    - file: Markdown/Wimmelbild
-  - caption: Datenanreicherung & -bereinigung 
+    - file: Markdown/Linked_Data
+  - caption: 3. Datenzitierung
     chapters:
-    - file: Markdown/Einleitung_Datenbearbeitung
+    - file: Markdown/Einleitung_Datenzitierung
+    - file: Markdown/PID
+  - caption: 4. Datenmanipulation
+    chapters:
+    - file: Markdown/Einleitung_Datenmanipulation
     - file: Markdown/R_Markdown
     - file: Markdown/R_Übung_Reprodu
-  - caption: Zusammenfassung
-    chapters: 
-    - file: Markdown/Zusammenfassung
+  - caption: Literaturverzeichnis
+    chapters:
+    - file: Markdown/Literaturverzeichnis 

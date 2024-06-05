@@ -10,6 +10,11 @@ logo: quadriga-logo.jpeg
 execute:
   execute_notebooks: force
 
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/QuadrigaTabelle/Fallstudie1
+  branch: main
+
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
@@ -17,7 +22,12 @@ latex:
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
-  - references.bib
+  - Literatur.bib
+
+# reference style
+sphinx:
+  config:
+    bibtex_reference_style: author_year
 
 # Information about where the book exists on the web
 repository:
@@ -29,6 +39,6 @@ repository:
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: false
-  use_repository_button: false
+  use_repository_button: true
 
 

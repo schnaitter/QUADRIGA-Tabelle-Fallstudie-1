@@ -1,8 +1,4 @@
----
-output:
-  word_document: default
-  html_document: default
----
+(Übung_csv)=
 # Übung: Arbeiten mit CSV-Dateien in R
 
 ## 1 Vorwort
@@ -30,12 +26,13 @@ Zur Installation der Computersprache **R** und **R-Studio** geht es
 **Neues R Skript anlegen**  
 1. Öffnen Sie R-Studio.  
 2. Ein neues Skript, in dem Sie Befehle eingeben können, öffnen Sie
-unter *Files*: ![Anleitung zum Öffnen eines neuen
-R-Skriptes](C:/Users/ant87282/Pictures/Camera%20Roll/Screenshot_R_Studio_open_new_skript.png)  
-  
+unter *Files*: 
+![](_images/R_Studio_open_new_script.png)  
+*Abbildung 4: Anleitung zum Öffnen eines neuen R-Skriptes*
+
 **Interface von R-Studio:**  
-![Interface
-R-Studio](C:/Users/ant87282/Pictures/Camera%20Roll/Screenshot_R_Studio_Interface_erklärung.png)
+![](_images/R_Studio_Interface.png)
+*Abbildung 5: Interface von R-Studio*
 
 **R Skript:**  
 Im R Skript werden die Befehle eingegeben, welche **R** ausführen soll.
@@ -148,12 +145,11 @@ kann auch der Befehl `choose.files()` genutzt werden:*
 ```
 data_csv <- read.csv2(choose.files(),header = FALSE)
 ```
-  
-
-> **Tipp:** Wenn Sie die Bedeutung und Syntax eines Befehls besser
-> verstehen wollen, empfielt es sich, diesen Befehl im Handbuch
-> nachzuschlagen. Hierzu setzen Sie ein `?` vor den Befehl Ihres
-> Interesses.  
+ 
+`````{admonition} Tipp
+:class: tip
+Wenn Sie die Bedeutung und Syntax eines Befehls besser verstehen wollen, empfielt es sich, diesen Befehl im Handbuch nachzuschlagen. Hierzu setzen Sie ein `?` vor den Befehl Ihres Interesses.
+`````
 
 *Beispiel:*  
 ```
@@ -168,6 +164,7 @@ deren Struktur zu verstehen.
 ```
 show(data_csv)
 ```
+
 ```
     ##                                                                 V1	   V2	    V3
     ## 1                                      GENESIS-Tabelle: 21341-0001            
@@ -340,7 +337,10 @@ Programme bleibt, sollten Sie stets eine UFT-8 Kodierung beibehalten.
 Eine bessere Anzeige können Sie trotzdem mit folgenden Schritten
 erreichen.
 
-> Anmerkung: Je nach Einstellung von R-Studio kommt dieses Problem ggf. nicht auf und Umlaute werden korrekt angezeigt. 
+
+`````{admonition} Hinweis
+Je nach Einstellung von R-Studio kommt dieses Problem ggf. nicht auf und Umlaute werden korrekt angezeigt.
+`````
 
 **Lösungsansätze bei falscher Anzeige**  
 Sie können die Datei als ISO 8859-1 (“Latin-1”) kodiert laden. Hierzu
@@ -377,11 +377,8 @@ Um Probleme mit der Zeichenkodierung zu vermeiden, speichern Sie am
 besten schon im Vorhinein Ihre Datei mit UTF-8 Kodierung ab. Dies können
 Sie meist direkt unter den `Speichern unter...` Dateiformaten auswählen:
 
-<img
-src="C:/Users/ant87282/Pictures/Camera%20Roll/Screenshot_abspeichern_UTF8_%202024-04-15%20172941.png"
-id="id" class="class" width="600"
-alt="Abspeichern mit UTF-8 Kodierung" />  
-  
+![](_images/UTF8_ Zeichenkodierung.png)  
+*Abbildung 6: Abspeichern mit UTF-8 Zeichenkodierung*
 
 ### Umlaute entfernen 
 
@@ -517,10 +514,10 @@ Direkte manuelle Bearbeitung in der Tabelle:
 ```
 edit(Tabellendaten)
 ```
-**Achtung:** Es empfiehlt sich auf Befehle wie diese zu verzichten, da
-die Änderungen nicht im **R Skript** oder der **Console** angezeigt und
-somit **nicht nachvollzogen** werden können!  
-  
+
+```{admonition} Achtung!
+Es empfiehlt sich auf Befehle wie diese zu verzichten, da die Änderungen nicht im **R Skript** oder der **Console** angezeigt und somit **nicht nachvollzogen** werden können!  
+```
 
 ------------------------------------------------------------------------
 
@@ -578,16 +575,13 @@ passend. Die Variable “Angestelltenzahl_2020” wird jedoch auch als
 `character` interpretiert. Dies muss manuell geändert werden, da sonst
 bestimmte Auswertungen nicht möglich sind und Fehler entstehen können.  
 
-> **Tipp:**  
-> Im *Environment* Fenster können Sie die Variablenklasse ebenfalls
-> schnell einsehen
-
-<img
-src="C:\Users\ant87282\Pictures\Camera%20Roll\Screenshot_R_Environment_Variablenklassen.png"
-id="id" class="class" width="600"
-alt="Variablenklassen im Environment-Fenster" />  
+`````{admonition} Tipp
+:class: tip
+Im *Environment* Fenster können Sie die Variablenklassen ebenfalls schnell einsehen.
+`````
   
-  
+![](_images/R_Environment_Variablenklassen.png)  
+*Abbildung 7: Environment-Fenster in R-Studio*  
 
 **Fallbeispiel:** Betrachten Sie die Funktion `max()`, welche den
 Maximalwert in der jeweiligen Spalte zurückgeben soll. Hinweis:
@@ -607,7 +601,7 @@ Zahl kann also nicht stimmen!
 Da die Variable “Angestelltenzahl\_2020” als `character` interpretiert
 wird, ändert sich auch die Bedeutung der Funktion `max()`. Die Funkion
 `max()` gibt nun nicht mehr den Maximalwert zurück, sondern den
-niedrigsten Platz in alphabetischer Sortierung.  Nur wenn wenn die Werte
+niedrigsten Platz in alphabetischer Sortierung. Nur wenn wenn die Werte
 in der Tabelle auch als Zahlen (also numerisch/integer) von **R**
 gelesen werden, gibt die Funktion `max()` den Maximalwert der Spalte
 zurück.  
@@ -643,7 +637,9 @@ max(Tabellendaten$Angestelltenzahl_2020, na.rm = TRUE)
 > **R** Ihren Daten zuweist und ändern Sie dies gegebenenfalls, um
 > Fehler zu vermeiden.
 
-  
+`````{admonition} Wichtig!
+Überprüfen Sie immer die Art der Variablenklasse, welche **R** Ihren Daten zuweist und ändern Sie dies gegebenenfalls, um Fehler zu vermeiden.
+`````
 
 ### Variablen hinzufügen 
 
@@ -730,7 +726,10 @@ anders möglich.
 > gut. Dies erleichtert Ihnen selbst, aber auch allen anderen, die Ihre
 > Daten verwenden, dass Arbeiten! Eine gute Struktur von Daten liefert der Tidy- Data Ansatz (Kapitel ??)
 
-  
+```{admonition} Wichtig!
+Wenn Sie Daten generieren, strukturieren Sie diese immer gut. Dies erleichtert Ihnen selbst, aber auch allen anderen, die Ihre Daten verwenden, dass Arbeiten! Eine gute Struktur von Daten liefert der Tidy- Data Ansatz (s. [Kapitel Tidy Data](Tidy_data)).
+```
+ 
 **Einpflegen des Variableninhalts**
 ```
 #1.Ebene

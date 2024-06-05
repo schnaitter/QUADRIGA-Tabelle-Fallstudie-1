@@ -1,23 +1,26 @@
----
-output:
-  word_document: default
-  html_document: default
-  pdf_document: default
----
-# Übung: Reproduzierbarkeit 
+(Übung: Reproduzierbarkeit Nationaler Bildungsbericht)=
+# Übung: Reproduzierbarkeit Nationaler Bildungsbericht
 
-In dem vorangegangenen Kapitel wurden Sie vertraut gemacht mit ersten Grundbausteinen im Arbeiten mit **R**.  Diese Fähigkeiten können Sie nutzen, um die *Reproduzierbarkeit* von Grafiken, Daten, etc. zu überprüfen. Was genau Reproduzierbarkeit ist, können Sie in [Kapitel ??]() nachlesen.
+In dem vorangegangenen Kapitel wurden Sie  mit ersten Grundbausteinen im Arbeiten mit **R** vertraut gemacht.  Diese Fähigkeiten können Sie nutzen, um die *Reproduzierbarkeit* von Grafiken, Daten, etc. zu überprüfen.
+
+`````{admonition} Doch was genau ist eigentlich Reproduzierbarkeit?
+:class: tip
+Der Begriff Reproduzierbarkeit umschreibt in der Wissenschaft die Möglichkeit, durch Verwenden der gleichen Ausgangsdaten und Auswertungsmethoden auf die gleichen Ergebnisse zu produzieren (Medicine et al., 2019).
+`````
 
 ## Fallbeispiel: Bildungsbericht 
 
 Im nationalen [Bildungsbericht 2022](https://www.bildungsbericht.de/de/bildungsberichte-seit-2006/bildungsbericht-2022)
 befindet sich auf der Seite 259 folgende Abbildung:
 
-![Kreisdiagramme Bildungsbericht](C:/Users/ant87282/Documents/Fallstudie_1/Übung_Kreisdiagramm/Kreisdiagramme_Bildungsbericht.png)
+![](_images/Abb_H1-3.png)  
+*Abbildung 8: Abb.H1-3 aus dem Nationalen Bildungsbericht* 
 
 Wenn Sie nun das Kreisdiagramm für *"Hochschulen insgesamt"* und *"Personen"* auf Reproduzierbarkeit überprüfen möchten, benötigen Sie hierfür die Daten aus der Primärquelle. Hierzu müssen Sie nun selbst recherchieren und versuchen, die Ausgangsdaten zu finden. 
-> Beachten Sie:\
-Der Bildungsbericht verweist auf einzelne Excel-Dateien als Datenbasis (Hier: "Tab. H1-9web"), welche gleichzeitig mit dem Bildungsbericht veröffenlticht werden. Eine gute wissenschaftliche Praxis verlangt jedoch, dass Sie die jeweilige Primärquelle verwenden und nicht die verlinkten Sekundärquellen.  
+
+```{admonition} Achtung!
+Der Bildungsbericht verweist auf einzelne Excel-Dateien als Datenbasis (Hier: "Tab. H1-9web"), welche gleichzeitig mit dem Bildungsbericht veröffenlticht werden. Eine gute wissenschaftliche Praxis verlangt jedoch, dass Sie die jeweilige Primärquelle verwenden und nicht die verlinkten Sekundärquellen. 
+```
 
 ### Primärquelle finden 
 
@@ -53,7 +56,7 @@ Hier können Sie nun das Jahr 2020 auswählen, auf dass das Kreisdiagramm verwei
 </details>
 
 Öffnen Sie nun die Datei in einem Programm Ihrer Wahl (z.B. Excel).
-Wie Sie nun vermutlich selber erkannt haben, handelt es sich bei dieser Datei um die CSV-Ausgangsdatei aus vorangegangener [Übung: Arbeiten mit CSV-Dateien in R]().
+Wie Sie nun vermutlich selber erkannt haben, handelt es sich bei dieser Datei um die CSV-Ausgangsdatei aus vorangegangener Lerneinheit [Übung: Arbeiten mit CSV-Dateien in R](Übung_csv).
 
 ### Nachbauen des Kreisdiagramms in R
 Das nachfolgende Skript knüpft an die vorangegangene Übung an. Es wird vorausgesetzt das die Daten entsprechend des Skriptes angepasst wurden.
@@ -80,7 +83,8 @@ library(tidyverse)
 
 #### Aufbau des Kreisdiagramms 
 
-![Kreisdiagramm Hochschulen insgesamt](C:/Users/ant87282/Documents/Fallstudie_1/Übung_Kreisdiagramm/Kreisdiagramme_Bildungsbericht_einzelansicht.png)
+![](_images/Abb_H1-3_fokus.png)  
+*Abbildung 9: Abb.H1-3 aus dem Nationalen Bildungsbericht* 
 
 Um das Kreisdiagramm reproduzieren zu können, müssen Sie zunächst die einzelnen Bestandteile verstehen.
 Das Diagramm unterteilt in die folgenden drei Personalgruppen: 
@@ -235,14 +239,16 @@ ggplot(Daten_kreisdiagramm, aes(x="", y=Absolute_Werte, fill=Arbeitsverhältnis)
              show.legend = FALSE) #Beschriftung soll nicht in der Legende angezeigt werden
 ```
 
-![R-Output Kreisdiagramm](C:/Users/ant87282/Documents/Fallstudie_1/Übung_Kreisdiagramm/pie_with_R.png)
+![](_images/pie_with_R.png)  
+*Abbildung 10: Nachgbautes Kreisdiagramm mit R* 
 
 Voilà, Sie haben soeben das Kreisdiagramm nachgebaut!
 
 #### Fazit 
 Betrachten Sie nun das originale Diagramm aus dem Bildungsbericht und das von Ihnen selbstständig erzeugte im Vergleich:
 
-![Vergleich der Kreisdiagramme](C:/Users/ant87282/Documents/Fallstudie_1/Übung_Kreisdiagramm/Pie_vergleich_final.png)
+![](_images/Pie_vergleich.png)  
+*Abbildung 11: vergleich nachgebautes vs. originales Kreisdiagramm* 
 
 Bis auf kleine Schönheitsfehler fällt im direkten Vergleich kein Unterschied auf.
 
